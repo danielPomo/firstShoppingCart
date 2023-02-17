@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Find lots of products, buy online now!" />
+    <meta name="keywords" content="online store computer desktop laptop" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <title>Carrito de compras</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <!-- navbar -->
+      <nav class="navbar grid--container">
+        <a class="navbar__logo" href="#">
+          <i class="bx bxs-castle"></i>Kingdom
+        </a>
+        <div id="nav" class="navbar__menu">
+          <a href="#close"><i class="bx bx-x btn__close navbar__icon"></i></a>
+          <ul class="navbar__list">
+            <li>
+              <a class="navbar__link" href="#">Home</a>
+            </li>
+            <li>
+              <a class="navbar__link" href="#handbags">Handbags</a>
+            </li>
+            <li>
+              <a class="navbar__link" href="#jewelery">Jewelery</a>
+            </li>
+            <li>
+              <a class="navbar__link" href="#beauty">Beauty</a>
+            </li>
+            <li>
+              <a class="navbar__link" href="#women">Women</a>
+            </li>
+            <li>
+              <a class="navbar__link" href="#men">Men</a>
+            </li>
+          </ul>
+        </div>
+        <!-- cart icon-->
+        <ul class="navbar__list">
+          <li class="navbar__list">
+            <a class="navbar__link" href="#cart">
+              <i class="bx bx-cart cart__icon"> </i>
+            </a>
+            <span class="cart__counter flex-center" id="cart-counter">1</span>
+          </li>
+        </ul>
+        <a href="#nav"><i class="bx bx-menu btn__open navbar__icon"></i></a>
+        <!-- navbar open button -->
+      </nav>
+    </header>
+    <div id="cart" class="cart__menu flex-column-center">
+      <a href="#close"><i class="bx bx-x cart__close"></i></a>
+      <h2 class="cart__title">Your Order</h2>
+      <div class="cart__wrapper" id="cart-wrapper">
+        <div class="cart__detail">
+          <div class="img-center">
+            <img
+              class="cart__img"
+              src="./assets/img/selection/selection1.png"
+              alt="Handbag B10"
+            />
+          </div>
+          <div class="cart__details">
+            <div class="cart__product">
+              <span>Handbag B10</span>
+              <span>1100</span>
+            </div>
+            <div class="cart__buttons">
+              <div class="cart__qty flex-center">
+                <button
+                  type="button"
+                  class="cart__button add-to-cart flex-center"
+                  data-id="1"
+                  type="button"
+                >
+                  +
+                </button>
+                <span>1</span>
+                <button
+                  button
+                  type="button"
+                  class="cart__button remove-from-cart flex-center"
+                  data-id="1"
+                  type="button"
+                >
+                  -
+                </button>
+              </div>
+              <button
+                type="button"
+                class="cart__button cart-remove flex-center"
+                data-id="1"
+                data-id="1"
+              >
+                <i class="bx bxs-trash"></i>
+              </button>
+            </div>
+            <div class="cart__amount">
+              <span>Subtotal</span>
+              <span>1100</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="cart__sumup">
+        Units: <span class="cart__items" id="item-counter"></span>
+      </p>
+      <span class="cart__total" id="cart-total"></span>
+      <div class="action__buttons" id="action-buttons">
+        <!-- modal -->
+        <button
+          disabled
+          type="button"
+          class="cart__checkout"
+          id="cart-checkout"
+        >
+          Buy Now
+        </button>
+        <div id="modal-window" class="modal">
+          <div class="modal__content flex-column-center">
+            <span class="close flex-center">
+              <i class="bx bx-x"></i>
+            </span>
+            <p>Thanks for shopping with us! We hope to see you soon.</p>
+          </div>
+        </div>
+        <button disabled type="button" class="cart__clear" id="cart-clear">
+          Clear
+        </button>
+        <div id="modal-window-2" class="modal">
+          <div class="modal__content flex-column-center">
+            <p>Are you sure you want to leave your cart?</p>
+            <span class="close flex-center">
+              <i class="bx bx-run"></i>
+            </span>
+            <span class="stay flex-center">
+              <i class="bx bx-cart-add"></i>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main>
+      <section class="home">
+        <article class="home__info flex-column-center">
+          <h1 class="home__title title">Summer Luxury Collection</h1>
+          <p class="home__text">
+            Influential, innovative and progressive, this collection has
+            reinvented a wholly modern approach to fashion.
+          </p>
+          <img class="home__img" src="./assets/img/home-info-pic.png" alt="" />
+        </article>
+        <div class="home__pic flex-center">
+          <img
+            class="home__img home__img--width-100"
+            src="./assets/img/home-pic.png"
+            alt=""
+          />
+        </div>
+      </section>
+      <!-- selected products -->
+      <section class="selection" id="selection__container">
+        <article class="selection__item flex-column-center" id="elemento">
+          <div class="selection__figure flex-center">
+            <img
+              class="selection__img"
+              src="./assets/img/selection/selection1.png"
+              alt="Handbag Style B10"
+            />
+          </div>
+          <div class="selection__info flex-column-center">
+            <h2 class="selection__name">Handbag Style B10</h2>
+            <p class="selection__description">
+              Vintage elements are paired with archival details as an ode to the
+              glamour that permeates Kingdom's latest collections.
+            </p>
+            <div class="selection__purchase flex-column-center">
+              <h3 class="selection__price">1100 EUR</h3>
+              <button type="button" class="selection__button" id="cart-add">
+                Add to cart
+              </button>
+              <!-- modal -->
+              <div id="modal-window3" class="modal">
+                <div class="modal__content flex-column-center">
+                  <span class="close flex-center">
+                    <i class="bx bx-x"></i>
+                  </span>
+                  <p>There are no more available units of this product! Try later.</p>
+                </div>
+              </div>
+              <!--  -->
+              <p class="selection__stock">Available: 100 units</p>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+    <!-- footer -->
+    <footer class="footer">
+      <div class="footer__help">
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a class="footer__link" href="./index.html">Shipping</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="./pages/about.html">Payment</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="./pages/portfolio.html">Returns</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="./pages/contact.html">Exchanges</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__company">
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a class="footer__link" href="./index.html">About</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="./pages/about.html">Code of Ethics</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="./pages/portfolio.html">Careers</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="./pages/contact.html">Legal</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__media">
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a class="footer__link" href="./index.html">
+              <i class="bx bx-mobile-alt"></i>Contact Center
+            </a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="./pages/about.html">
+              <i class="bx bxl-facebook"></i>Facebook
+            </a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="./pages/portfolio.html">
+              <i class="bx bxl-twitter"></i>Twitter
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__legend">
+        <p class="footer__rights">&copy; All rights reserved</p>
+      </div>
+    </footer>
+    <script src="./js/selection.js"></script>
+  </body>
+</html>
